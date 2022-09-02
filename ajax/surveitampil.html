@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showUser(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            }
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "/ajax/getsurvei.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <br>
+        <h1 align="center">Data Kegiatan</h1>
+        <select name="nama_produk" onchange="showUser(this.value)" style="width: 300px; margin-left: 50px;" class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option value="0">Semua Data</option>
+            <option value="Sudah">Sudah</option>
+            <option value="Belum">Belum</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint" style=" margin-left: 50px; margin-right: 50px;"><b>Data akan ditampilkan di sini.</b></div><br>
+     <a href="../index.php" class="btn btn-secondary mb-4" style=" margin-left: 50px; margin-right: 50px;">Kembali</a>
+</body>
+</html>
