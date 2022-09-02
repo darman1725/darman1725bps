@@ -1,7 +1,8 @@
 Project Team Magang - BPS Kota Malang
 
-Mutiara Rahmanda NIM.1941720189
+Darman Saputra Saragih              NIM.1941720060
+Mutiara Rahmanda Tri Rizkia         NIM.1941720189
+Qorina Anindhita Prameswari         NIM.1941720049
+Wildan Achmad Fachrurrozi           NIM.1941720136
 
-Wildan Achmad Fachrurrozi NIM.1941720136
 
-Darman Saputra Saragih NIM.1941720060
